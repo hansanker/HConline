@@ -1,0 +1,33 @@
+<md-dialog aria-label="login" ng-controller="loginDialogCtrl">
+    <md-toolbar class="md-theme-light">
+        <h1 class="md-toolbar-tools">
+            <span>Sign in dailog</span>
+        </h1>
+    </md-toolbar>
+    <md-content >
+
+        <section layout="row">
+            <form style="padding: 20px;" flex>
+                <div layout="column" layout-align="center">
+                    <md-text-float label="E-mail" ng-model="user.email" type="email"></md-text-float>
+                    <md-text-float label="Password" ng-model="user.password" type="password"></md-text-float>
+                </div>
+            </form>
+            <section layout="column" style="padding: 20px;" flex layout-align="center">
+                <p>Or you can use your Facebook account</p>
+                <md-button ng-click="oauthLogin('facebook')">Facebook</md-button>
+            </section>
+        </section>
+
+    </md-content>
+    <div class="md-actions" layout="row">
+        <span>{{ userData }}</span>
+        <span flex> Here is {{ dataFromFirebase.$value }}</span>
+        <md-button ng-click="cancel()">
+            Close
+        </md-button>
+        <md-button ng-click="login(user.email, user.password)">
+            Sign in
+        </md-button>
+    </div>
+</md-dialog>
