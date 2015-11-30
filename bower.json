@@ -31,5 +31,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "resolutions": {
+    "firebase": "2.1.x"
+  }
 }
