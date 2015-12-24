@@ -18,7 +18,6 @@ var userController = angular.module('user.controllers', ['ngMaterial', 'firebase
         };
 
 
-
         $scope.login = function (email, pass) {
             userFactories.login(email, pass);
             var checkvalue = userFactories.getUser();
